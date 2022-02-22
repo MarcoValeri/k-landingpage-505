@@ -1,27 +1,36 @@
 .error {
-    width: 80%;
-    height: 80vh;
+    width: 60%;
+    min-height: 100vh;
     margin: 15rem auto 10rem auto;
     border: 1px solid #000;
 
+    @include respond('xxl') {
+        width: 80%;
+        margin: 10rem auto 10rem auto;
+        background-color: #000;
+    }
+
     @include respond('xl') {
         width: 90%;
+        background-color: #f00;
     }
 
     @include respond('md') {
         width: 80%;
         height: 100vh;
         margin: 5rem auto 10rem auto;
+        background-color: #0f0;
     }
 
     @include respond('sm') {
         width: 90%;
+        background-color: #ff0;
     }
 
     &__grid-container {
-        height: 100%;
+        min-height: 90vh;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1.5fr 2fr;
         grid-template-areas:
         "container-content container-image";
         border: 1px solid #f00;
@@ -107,7 +116,7 @@
 
     &__image {
         position: absolute;
-        width: 50%;
+        width: 70%;
         bottom: 0%;
 
         @include respond('xl') {
