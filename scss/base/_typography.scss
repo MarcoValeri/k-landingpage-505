@@ -2,7 +2,6 @@
     font-family: 'Lato', sans-serif;
     font-size: 2.1rem;
     color: $font-paragraph;
-    font-weight: 700;
 
     @include respond('es') {
         font-size: 1.5rem;
