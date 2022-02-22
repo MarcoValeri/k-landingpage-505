@@ -18,6 +18,12 @@
         width: 90%;
     }
 
+    @include respond('ls') {
+        margin: 2rem auto 10rem auto;
+        height: 100vh;
+        background-color: #000;
+    }
+
     &__grid-container {
         height: 100%;
         display: grid;
@@ -32,6 +38,7 @@
             "container-content"
             "container-image";
         }
+
     }
 
     &__container-content {
@@ -44,6 +51,10 @@
         }
 
         @include respond('sm') {
+            height: 90%;
+        }
+
+        @include respond('ls') {
             height: 90%;
         }
     }
@@ -60,6 +71,10 @@
 
         @include respond('md') {
             height: auto;
+        }
+
+        @include respond('ls') {
+            height: 90%;
         }
     }
 
