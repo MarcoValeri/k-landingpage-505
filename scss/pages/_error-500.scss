@@ -1,0 +1,68 @@
+.error {
+    width: 60%;
+    height: 80vh;
+    margin: 15rem auto 10rem auto;
+    border: 1px solid #000;
+
+    &__grid-container {
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+        "container-content container-image";
+        border: 1px solid #f00;
+    }
+
+    &__container-content {
+        height: 80%;
+        grid-area: container-content;
+        border: 1px solid #00f;
+    }
+
+    &__container-image {
+        height: 90%;
+        grid-area: container-image;
+        position: relative;
+        border: 1px solid #ff0;
+    }
+
+    &__title {
+        font-family: 'Caveat', cursive;
+        font-size: 7.5rem;
+        color: $font-black;
+        margin-bottom: 1.3rem;
+    }
+
+    &__paragraph {
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+    &__headline {
+        color: $font-headline;
+        margin-bottom: 1.7rem;
+    }
+
+    &__list {
+        margin-bottom: 7rem;
+    }
+
+    &__list-item {
+        list-style: none;
+        margin-bottom: 1rem;
+    }
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &__sub-title {
+        color: $font-sub-title;
+    }
+
+    &__image {
+        position: absolute;
+        width: 50%;
+        bottom: 0%;
+    }
+}
