@@ -1,8 +1,22 @@
 .error {
-    width: 60%;
+    width: 80%;
     height: 80vh;
     margin: 15rem auto 10rem auto;
     border: 1px solid #000;
+
+    @include respond('xl') {
+        width: 90%;
+    }
+
+    @include respond('md') {
+        width: 80%;
+        height: 100vh;
+        margin: 5rem auto 10rem auto;
+    }
+
+    @include respond('sm') {
+        width: 90%;
+    }
 
     &__grid-container {
         height: 100%;
@@ -11,12 +25,27 @@
         grid-template-areas:
         "container-content container-image";
         border: 1px solid #f00;
+
+        @include respond('md') {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "container-content"
+            "container-image";
+        }
     }
 
     &__container-content {
         height: 80%;
         grid-area: container-content;
         border: 1px solid #00f;
+
+        @include respond('md') {
+            height: 80%;
+        }
+
+        @include respond('sm') {
+            height: 90%;
+        }
     }
 
     &__container-image {
@@ -24,6 +53,14 @@
         grid-area: container-image;
         position: relative;
         border: 1px solid #ff0;
+
+        @include respond('xl') {
+            height: 80%;
+        }
+
+        @include respond('md') {
+            height: auto;
+        }
     }
 
     &__title {
@@ -31,6 +68,14 @@
         font-size: 7.5rem;
         color: $font-black;
         margin-bottom: 1.3rem;
+
+        @include respond('md') {
+            font-size: 6rem;
+        }
+
+        @include respond('es') {
+            font-size: 4rem;
+        }
     }
 
     &__paragraph {
@@ -64,5 +109,30 @@
         position: absolute;
         width: 50%;
         bottom: 0%;
+
+        @include respond('xl') {
+            width: 70%;
+        }
+
+        @include respond('lg') {
+            width: 90%;
+        }
+
+        @include respond('md') {
+            width: 70%;
+            top: -40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include respond('sm') {
+            width: 90%;
+            top: 0rem;
+        }
+
+        @include respond('es') {
+            width: 70%;
+        }
+
     }
 }

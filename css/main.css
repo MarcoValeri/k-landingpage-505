@@ -25,40 +25,79 @@ body {
   font-size: 2.1rem;
   color: #364659;
   font-weight: 700; }
+  @media only screen and (max-width: 380px) {
+    .description {
+      font-size: 1.5rem; } }
 
 .paragraph {
   font-family: 'Lato', sans-serif;
   font-size: 1.7rem; }
+  @media only screen and (max-width: 380px) {
+    .paragraph {
+      font-size: 1.2rem; } }
 
 .link {
   color: #1789FC;
   text-decoration: none; }
 
 .error {
-  width: 60%;
+  width: 80%;
   height: 80vh;
   margin: 15rem auto 10rem auto;
   border: 1px solid #000; }
+  @media only screen and (max-width: 1199px) {
+    .error {
+      width: 90%; } }
+  @media only screen and (max-width: 767px) {
+    .error {
+      width: 80%;
+      height: 100vh;
+      margin: 5rem auto 10rem auto; } }
+  @media only screen and (max-width: 575px) {
+    .error {
+      width: 90%; } }
   .error__grid-container {
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "container-content container-image";
     border: 1px solid #f00; }
+    @media only screen and (max-width: 767px) {
+      .error__grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "container-content" "container-image"; } }
   .error__container-content {
     height: 80%;
     grid-area: container-content;
     border: 1px solid #00f; }
+    @media only screen and (max-width: 767px) {
+      .error__container-content {
+        height: 80%; } }
+    @media only screen and (max-width: 575px) {
+      .error__container-content {
+        height: 90%; } }
   .error__container-image {
     height: 90%;
     grid-area: container-image;
     position: relative;
     border: 1px solid #ff0; }
+    @media only screen and (max-width: 1199px) {
+      .error__container-image {
+        height: 80%; } }
+    @media only screen and (max-width: 767px) {
+      .error__container-image {
+        height: auto; } }
   .error__title {
     font-family: 'Caveat', cursive;
     font-size: 7.5rem;
     color: #222222;
     margin-bottom: 1.3rem; }
+    @media only screen and (max-width: 767px) {
+      .error__title {
+        font-size: 6rem; } }
+    @media only screen and (max-width: 380px) {
+      .error__title {
+        font-size: 4rem; } }
   .error__paragraph {
     line-height: 1.6;
     margin-bottom: 3rem; }
@@ -78,3 +117,22 @@ body {
     position: absolute;
     width: 50%;
     bottom: 0%; }
+    @media only screen and (max-width: 1199px) {
+      .error__image {
+        width: 70%; } }
+    @media only screen and (max-width: 991px) {
+      .error__image {
+        width: 90%; } }
+    @media only screen and (max-width: 767px) {
+      .error__image {
+        width: 70%;
+        top: -40%;
+        left: 50%;
+        transform: translate(-50%, -50%); } }
+    @media only screen and (max-width: 575px) {
+      .error__image {
+        width: 90%;
+        top: 0rem; } }
+    @media only screen and (max-width: 380px) {
+      .error__image {
+        width: 70%; } }
