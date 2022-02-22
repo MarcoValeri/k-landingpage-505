@@ -1,8 +1,11 @@
 .error {
-    width: 80%;
+    width: 60%;
     height: 80vh;
     margin: 15rem auto 10rem auto;
-    border: 1px solid #000;
+
+    @include respond('xxl') {
+        width: 80%;
+    }
 
     @include respond('xl') {
         width: 90%;
@@ -18,19 +21,12 @@
         width: 90%;
     }
 
-    @include respond('ls') {
-        margin: 2rem auto 10rem auto;
-        height: 100vh;
-        background-color: #000;
-    }
-
     &__grid-container {
         height: 100%;
         display: grid;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1.5fr 2fr;
         grid-template-areas:
         "container-content container-image";
-        border: 1px solid #f00;
 
         @include respond('md') {
             grid-template-columns: 1fr;
@@ -44,7 +40,6 @@
     &__container-content {
         height: 80%;
         grid-area: container-content;
-        border: 1px solid #00f;
 
         @include respond('md') {
             height: 80%;
@@ -53,17 +48,12 @@
         @include respond('sm') {
             height: 90%;
         }
-
-        @include respond('ls') {
-            height: 90%;
-        }
     }
 
     &__container-image {
         height: 90%;
         grid-area: container-image;
         position: relative;
-        border: 1px solid #ff0;
 
         @include respond('xl') {
             height: 80%;
@@ -71,10 +61,6 @@
 
         @include respond('md') {
             height: auto;
-        }
-
-        @include respond('ls') {
-            height: 90%;
         }
     }
 
@@ -125,7 +111,7 @@
         width: 50%;
         bottom: 0%;
 
-        @include respond('xl') {
+        @include respond('xxl') {
             width: 70%;
         }
 
@@ -149,5 +135,54 @@
             width: 70%;
         }
 
+    }
+}
+
+// Media Query for landscape
+@media only screen
+        and (max-width: 1300px)
+        and (max-height: 600px)
+        and (orientation: landscape) {
+    .error {
+        height: auto;
+        margin: 2rem auto 5rem auto;
+
+        &__grid-container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "container-content container-image";
+        }
+
+        &__container-content {
+            height: 100%;
+        }
+
+        &__container-image {
+            height: 100%;
+        }
+    }
+}
+
+@media only screen
+        and (max-width: 1300px)
+        and (max-height: 350px)
+        and (orientation: landscape) {
+    .error {
+        height: 250vh;
+        margin: 2rem auto 5rem auto;
+
+        &__grid-container {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+            "container-content"
+            "container-image";
+        }
+
+        &__container-content {
+            height: 100%;
+        }
+
+        &__container-image {
+            height: 100%;
+        }
     }
 }

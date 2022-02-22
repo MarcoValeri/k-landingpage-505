@@ -41,10 +41,12 @@ body {
   text-decoration: none; }
 
 .error {
-  width: 80%;
+  width: 60%;
   height: 80vh;
-  margin: 15rem auto 10rem auto;
-  border: 1px solid #000; }
+  margin: 15rem auto 10rem auto; }
+  @media only screen and (max-width: 1920px) {
+    .error {
+      width: 80%; } }
   @media only screen and (max-width: 1199px) {
     .error {
       width: 90%; } }
@@ -59,17 +61,15 @@ body {
   .error__grid-container {
     height: 100%;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas: "container-content container-image";
-    border: 1px solid #f00; }
+    grid-template-columns: 1.5fr 2fr;
+    grid-template-areas: "container-content container-image"; }
     @media only screen and (max-width: 767px) {
       .error__grid-container {
         grid-template-columns: 1fr;
         grid-template-areas: "container-content" "container-image"; } }
   .error__container-content {
     height: 80%;
-    grid-area: container-content;
-    border: 1px solid #00f; }
+    grid-area: container-content; }
     @media only screen and (max-width: 767px) {
       .error__container-content {
         height: 80%; } }
@@ -79,8 +79,7 @@ body {
   .error__container-image {
     height: 90%;
     grid-area: container-image;
-    position: relative;
-    border: 1px solid #ff0; }
+    position: relative; }
     @media only screen and (max-width: 1199px) {
       .error__container-image {
         height: 80%; } }
@@ -117,7 +116,7 @@ body {
     position: absolute;
     width: 50%;
     bottom: 0%; }
-    @media only screen and (max-width: 1199px) {
+    @media only screen and (max-width: 1920px) {
       .error__image {
         width: 70%; } }
     @media only screen and (max-width: 991px) {
@@ -136,3 +135,27 @@ body {
     @media only screen and (max-width: 380px) {
       .error__image {
         width: 70%; } }
+
+@media only screen and (max-width: 1300px) and (max-height: 600px) and (orientation: landscape) {
+  .error {
+    height: auto;
+    margin: 2rem auto 5rem auto; }
+    .error__grid-container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "container-content container-image"; }
+    .error__container-content {
+      height: 100%; }
+    .error__container-image {
+      height: 100%; } }
+
+@media only screen and (max-width: 1300px) and (max-height: 350px) and (orientation: landscape) {
+  .error {
+    height: 250vh;
+    margin: 2rem auto 5rem auto; }
+    .error__grid-container {
+      grid-template-columns: 1fr;
+      grid-template-areas: "container-content" "container-image"; }
+    .error__container-content {
+      height: 100%; }
+    .error__container-image {
+      height: 100%; } }
